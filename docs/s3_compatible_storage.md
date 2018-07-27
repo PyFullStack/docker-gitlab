@@ -72,9 +72,10 @@ version: '2'
 services:
   redis:
     restart: always
-    image: sameersbn/redis:3.0.6
+    image: sameersbn/redis:4.0.9
     command:
     - --loglevel warning
+    - --protected-mode no
     volumes:
     - /tmp/docker/gitlab/redis:/var/lib/redis:Z
 

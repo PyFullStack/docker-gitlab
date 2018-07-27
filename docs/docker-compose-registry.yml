@@ -3,8 +3,9 @@ version: '2'
 services:
   redis:
     restart: always
-    image: sameersbn/redis:3.0.6
+    image: sameersbn/redis:4.0.9
     command:
+    - --protected-mode no
     - --loglevel warning
     volumes:
     - redis:/var/lib/redis:Z
